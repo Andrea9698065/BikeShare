@@ -3,14 +3,18 @@
 @section('title', 'Inserimento Stazione')
 
 @section('contenuto')
+
     <div class="row justify-content-center">
         <div class="col-md-8 col-lg-6">
+
             <div class="card shadow rounded-4 border-0">
                 <div class="card-body p-4">
                     <h1 class="text-center mb-4">Inserisci una nuova stazione</h1>
 
                     @if(session('success'))
-                        <div class="alert alert-success">{{ session('success') }}</div>
+                        <div class="alert alert-success">
+                            {{ session('success') }}
+                        </div>
                     @endif
 
                     @if($errors->any())
@@ -46,7 +50,12 @@
                     </form>
                 </div>
             </div>
-            <div class="text-center mt-3 text-muted">Gestione stazioni BikeShare</div>
+
+            <div class="text-center mt-3 text-muted">
+                Gestione stazioni BikeShare
+            </div>
+
         </div>
     </div>
+
 @endsection

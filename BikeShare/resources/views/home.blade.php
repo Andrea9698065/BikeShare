@@ -7,7 +7,7 @@
         <div class="container-fluid py-3">
             <h1 class="display-5 fw-bold">BikeShare</h1>
             <p class="col-md-10 fs-5">
-                Benvenuto nel pannello di gestione del progetto.
+                Benvenuto hjkfedddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
             </p>
         </div>
 

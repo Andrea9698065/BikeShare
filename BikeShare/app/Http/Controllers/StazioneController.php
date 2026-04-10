@@ -7,32 +7,25 @@ use Illuminate\Http\Request;
 
 class StazioneController extends Controller
 {
-
     public function create()
     {
         return view('stazioni.create');
     }
 
-
     public function store(Request $request)
     {
-
-        $validated = $request->validate([
-            'indirizzo' => 'required|string|max:255',
-            'cap' => 'required|string|max:10',
-        ], [
-
-            'indirizzo.required' => 'L\'indirizzo è obbligatorio',
-            'cap.required' => 'Il CAP è obbligatorio',
+        $request->validate([
+            'indirizzo' => ['required', 'string', 'max:255'],
+            'cap'       => ['required', 'digits:5'],
         ]);
 
+        Stazione::create([
+            'indirizzo' => $request->indirizzo,
+            'cap'       => $request->cap,
+        ]);
 
-        Stazione::create($validated);
-
-        return redirect()->route('stazioni.create')
-            ->with('success', 'Stazione creata con successo!');
+        return redirect()
+            ->route('stazioni.create')
+            ->with('success', 'Stazione inserita correttamente.');
     }
-
-
-
 }

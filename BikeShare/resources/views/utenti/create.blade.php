@@ -1,16 +1,22 @@
 @extends('layouts.app')
+
 @section('title', 'Inserimento Utente')
+
 @section('contenuto')
 
     <div class="row justify-content-center">
         <div class="col-md-8 col-lg-6">
+
             <div class="card shadow rounded-4 border-0">
                 <div class="card-body p-4">
                     <h1 class="text-center mb-4">Inserisci un nuovo utente</h1>
 
                     @if(session('success'))
-                        <div class="alert alert-success">{{ session('success') }}</div>
+                        <div class="alert alert-success">
+                            {{ session('success') }}
+                        </div>
                     @endif
+
                     @if($errors->any())
                         <div class="alert alert-danger">
                             <ul class="mb-0">
@@ -50,8 +56,8 @@
 
                         <div class="mb-3">
                             <label for="num_carta_di_credito" class="form-label">Numero carta di credito</label>
-                            <input type="text" name="num_carta_di_credito" id="num_carta_di_credito"
-                                   class="form-control" value="{{ old('num_carta_di_credito') }}" required>
+                            <input type="text" name="num_carta_di_credito" id="num_carta_di_credito" class="form-control"
+                                   value="{{ old('num_carta_di_credito') }}" required>
                         </div>
 
                         <div class="mb-3">
@@ -80,7 +86,11 @@
                     </form>
                 </div>
             </div>
-            <div class="text-center mt-3 text-muted">Gestione utenti BikeShare</div>
+
+            <div class="text-center mt-3 text-muted">
+                Gestione utenti BikeShare
+            </div>
+
         </div>
     </div>
 
