@@ -1,0 +1,23 @@
+Schema logico
+UTENTI(id,
+        nome,
+        cognome,
+         cap,
+         indirizzo,
+          num_carta_di_credito,
+           cellulare,
+            mail,
+             data_nascita)
+STAZIONE(id,
+        indirizzo,
+         cap)
+BICICLETTA(id,
+        modello,
+        anno_di_produzione)
+SLOT(id, stato, id_bicicletta, id_stazione)
+NOLEGGIO(id, data_inizio, data_fine, costo, id_utente, id_bicicletta)
+Vincoli:
+id_utente  in NOLEGGIO  → UTENTI(id)
+id_bicicletta in NOLEGGIO → BICICLETTA(id)
+id_bicicletta in SLOT → BICICLETTA(id)
+id_stazione in SLOT → STAZIONE(id)
