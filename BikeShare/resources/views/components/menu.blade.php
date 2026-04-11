@@ -18,7 +18,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('noleggi.create') }}">Inserisci Noleggio</a>
                 </li>
-
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('utenti.create') }}">Inserisci dawUtente</a>
+                </li>
             </ul>
         </div>
     </div>
