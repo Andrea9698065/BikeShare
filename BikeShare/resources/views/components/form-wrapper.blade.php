@@ -8,6 +8,9 @@
         <div class="col-md-8 col-lg-6">
 
             <div class="card shadow rounded-4 border-0">
+
+
+
                 <div class="card-body p-4">
                     <h1 class="text-center mb-4">{{ $heading }}</h1>
 
@@ -34,7 +37,7 @@
             </div>
 
             <div class="text-center mt-3 text-muted">
-                Gestione BikeShare
+                Gestione BikeShare1
             </div>
 
         </div>

@@ -7,6 +7,14 @@ use Illuminate\Http\Request;
 
 class BiciclettaController extends Controller
 {
+    public function test()//per commikt
+    {
+        $modelli = $this->getModelli();
+        $anni = $this->getAnni();
+
+        return view('biciclette.create', compact('modelli', 'anni'));
+    }
+
     public function create()
     {
         $modelli = $this->getModelli();
